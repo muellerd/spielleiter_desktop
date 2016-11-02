@@ -27,4 +27,8 @@ public class Good {
     public String toString() {
         return this.name;
     }
+
+    public String getPriceString() {
+        return price;
+    }
 }

@@ -13,6 +13,7 @@ import model.*;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class MainWindowController implements Initializable{
@@ -28,7 +29,9 @@ public class MainWindowController implements Initializable{
 
     private ArrayList<String> logList;
     private ArrayList<Held> heldenList;
+    private HashMap<String, Held> heldenNameToHelds;
     private ArrayList<Good> goodsList;
+    private HashMap<String, Good> goodsNameToGoods;
 
     private ObservableList<String> listViewLogItems;
     private ObservableList<Held> listViewHeldenItems;
@@ -49,6 +52,7 @@ public class MainWindowController implements Initializable{
         this.listViewLog.setItems(listViewLogItems);
 
         this.heldenList = new ArrayList<>();
+        this.heldenNameToHelds = new HashMap<>();
         this.listViewHeldenItems = FXCollections.observableArrayList(heldenList);
         this.listViewHelden.setItems(listViewHeldenItems);
         this.listViewHelden.setCellFactory(new Callback<ListView, ListCell>() {
@@ -84,6 +88,7 @@ public class MainWindowController implements Initializable{
         });
 
         this.goodsList = Main.sessionData.getGoodsList();
+        this.goodsNameToGoods = Main.sessionData.getGoodsDict();
         this.listViewGoodsItems = FXCollections.observableArrayList(goodsList);
         FilteredList<Good> filteredGoods = new FilteredList<Good>(listViewGoodsItems, s -> true);
 
@@ -130,11 +135,29 @@ public class MainWindowController implements Initializable{
                 Dragboard db = event.getDragboard();
                 boolean success = false;
                 if(db.hasString()){
-                    System.out.println(db.getString());
+                    Good g = goodsNameToGoods.get(db.getString());
+                    Held h = heldenNameToHelds.get(currentCell.getText());
+                    System.out.println("Drop " + g.getName() + " on " + h.getName());
+                    h.addGood(g, 1);
                     success = true;
                 }
                 event.setDropCompleted(success);
                 event.consume();
+            }
+        });
+
+        listViewHelden.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if(event.getClickCount() == 2){
+                    Object obj = listViewHelden.getSelectionModel().getSelectedItem();
+                    if(obj != null){
+                        Held h = (Held) obj;
+                        System.out.println(h.getNameAndCost());
+                    }
+
+
+                }
             }
         });
     }
@@ -142,6 +165,7 @@ public class MainWindowController implements Initializable{
     public void addHeld(KeyEvent keyEvent) {
         if(keyEvent.getCode().equals(KeyCode.ENTER)){
             Held h = new Held(textFieldHeldenName.getText());
+            heldenNameToHelds.put(h.getName(), h);
             listViewHeldenItems.add(h);
             textFieldHeldenName.setText("");
         }

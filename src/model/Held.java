@@ -5,24 +5,21 @@ import java.io.Serializable;
 public class Held implements Serializable{
 
 	private String name;
-	private int costDukaten;
+	private int costGold;
 	private int costSilber;
-	private int costHeller;
-	private int costKreuzer;
-	
+	private int costKupfer;
+
 	public Held(){
-		costDukaten = 0;
+		costGold = 0;
 		costSilber = 0;
-		costHeller = 0;
-		costKreuzer = 0;
+		costKupfer = 0;
 	}
 	
 	public Held(String n){
 		this.name = n;
-		costDukaten = 0;
+		costGold = 0;
 		costSilber = 0;
-		costHeller = 0;
-		costKreuzer = 0;
+		costKupfer = 0;
 	}
 	
 	public String getName(){
@@ -34,34 +31,27 @@ public class Held implements Serializable{
 	}
 
 	public String getNameAndCost() {
-		return this.name + ": 	" + costDukaten + "D, " + costSilber + "S, " + costHeller + "H, " + costKreuzer + "K";
+		return this.name + ": 	" + costGold + " GM, " + costSilber + " SM, " + costKupfer + " KM";
 	}
 
 	public void addGood(Good g, int i) {
-		/*this.costKreuzer += g.getPriceKreuzer();
-		if(this.costKreuzer >= 10){
-			this.costKreuzer -= 10;
-			this.costHeller += 1;
-		}
-		
-		this.costHeller += g.getPriceHeller();
-		if(this.costHeller >= 10){
-			this.costHeller -= 10;
-			this.costSilber += 1;
-		}
-		
-		this.costSilber += g.getPriceSilber();
-		if(this.costSilber >= 10){
-			this.costSilber -= 10;
-			this.costDukaten += 1;
-		}
-		
-		this.costDukaten += g.getPriceDukaten();
-		*/
+		String priceString = g.getPriceString();
+        if(priceString.contains("GM")){
+            priceString = priceString.replace("GM", "").trim();
+            this.costGold += Integer.parseInt(priceString);
+        }
+        if(priceString.contains("SM")){
+            priceString = priceString.replace("SM", "").trim();
+            this.costSilber += Integer.parseInt(priceString);
+        }
+        if(priceString.contains("KM")){
+            priceString = priceString.replace("KM", "").trim();
+            this.costKupfer += Integer.parseInt(priceString);
+        }
 	}
 
 	public int getHeller() {
-		return this.costHeller;
+		return this.costKupfer;
 	}
 
 	public int getSilber() {
@@ -69,10 +59,6 @@ public class Held implements Serializable{
 	}
 
 	public int getDukaten() {
-		return this.costDukaten;
-	}
-
-	public int getKreuzer() {
-		return this.costKreuzer;
+		return this.costGold;
 	}
 }

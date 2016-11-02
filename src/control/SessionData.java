@@ -5,6 +5,7 @@ import model.*;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Random;
 
@@ -20,11 +21,11 @@ public class SessionData {
 
     private ArrayList<Held> helden;
     private ArrayList<Tavern> taverns;
-    //private Hashtable<String, Good> goods;
     private ArrayList<Noun> nouns;
     private ArrayList<Preposition> prepositions;
     private ArrayList<Adjective> adjectives;
     private ArrayList<Good> goods;
+    private HashMap<String, Good> goodsNameToGoods;
     
     private ArrayList<String> femaleNames;
     private ArrayList<String> maleNames;
@@ -35,7 +36,7 @@ public class SessionData {
     public SessionData(){
         this.helden = new ArrayList<Held>();
         this.taverns = new ArrayList<Tavern>();
-        //this.goods = new Hashtable<String, Good>();
+        this.goodsNameToGoods = new HashMap<>();
         this.nouns = new ArrayList<>();
         this.prepositions = new ArrayList<>();
         this.adjectives = new ArrayList<>();
@@ -55,9 +56,19 @@ public class SessionData {
         this.nouns = stringArrayToNounArray(nounStrings);
         this.prepositions = stringArrayToPrepositionArray(prepositionStrings);
         this.goods = stringArrayToGoodsArray(goodsStrings);
+        this.goodsNameToGoods = goodsListToDictionary(goods);
 
         System.out.println("Application is ready!");
 
+    }
+
+    private HashMap<String, Good> goodsListToDictionary(ArrayList<Good> goods) {
+        HashMap<String, Good> goodsDict = new HashMap<>();
+        for (Good g :
+                goods) {
+            goodsDict.put(g.getName(), g);
+        }
+        return goodsDict;
     }
 
     private ArrayList<Good> stringArrayToGoodsArray(ArrayList<String> goodsStrings) {
@@ -193,5 +204,9 @@ public class SessionData {
 
     public ArrayList<Good> getGoodsList() {
         return goods;
+    }
+
+    public HashMap<String, Good> getGoodsDict() {
+        return goodsNameToGoods;
     }
 }
