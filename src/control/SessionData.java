@@ -1,12 +1,11 @@
 package control;
 
 import model.*;
+import model.Character;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Random;
 
 public class SessionData {
@@ -19,7 +18,7 @@ public class SessionData {
     private String lastNameFile = "data/lastnames_all.txt";
     private String goodsFile = "data/goods_pathfinder.txt";
 
-    private ArrayList<Held> helden;
+    private ArrayList<Character> characters;
     private ArrayList<Tavern> taverns;
     private ArrayList<Noun> nouns;
     private ArrayList<Preposition> prepositions;
@@ -34,7 +33,7 @@ public class SessionData {
     public Random randomer;
 
     public SessionData(){
-        this.helden = new ArrayList<Held>();
+        this.characters = new ArrayList<Character>();
         this.taverns = new ArrayList<Tavern>();
         this.goodsNameToGoods = new HashMap<>();
         this.nouns = new ArrayList<>();
@@ -190,7 +189,7 @@ public class SessionData {
         }
 
         if(n.getGenus() == 1){
-            prep = p.getW();
+            prep = p.getF();
         }
 
         if(n.getGenus() == 2){

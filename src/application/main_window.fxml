@@ -12,11 +12,11 @@
    <children>
       <ListView fx:id="listViewLog" layoutX="14.0" layoutY="393.0" prefHeight="258.0" prefWidth="1024.0" />
       <Button fx:id="buttonNewTavern" layoutX="868.0" layoutY="30.0" mnemonicParsing="false" onAction="#createNewTavern" prefHeight="25.0" prefWidth="170.0" text="Neue Taverne" />
-      <ListView fx:id="listViewHelden" layoutX="14.0" layoutY="172.0" onDragDropped="#dropGood" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listViewCharacters" layoutX="14.0" layoutY="172.0" onDragDropped="#dropGood" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="14.0" layoutY="109.0" text="Helden" />
-      <TextField fx:id="textFieldHeldenName" layoutX="14.0" layoutY="135.0" onKeyPressed="#addHeld" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="textFieldCharacterName" layoutX="14.0" layoutY="135.0" onKeyPressed="#addHeld" prefHeight="25.0" prefWidth="200.0" />
       <Button fx:id="buttonNewName" layoutX="868.0" layoutY="68.0" mnemonicParsing="false" onAction="#createNewName" prefHeight="25.0" prefWidth="170.0" text="Neuer Name" />
-      <CheckBox fx:id="checkBoxW" layoutX="909.0" layoutY="101.0" mnemonicParsing="false" selected="true" text="w" />
+      <CheckBox fx:id="checkBoxF" layoutX="909.0" layoutY="101.0" mnemonicParsing="false" selected="true" text="w" />
       <CheckBox fx:id="checkBoxM" layoutX="959.0" layoutY="101.0" mnemonicParsing="false" selected="true" text="m" />
       <ListView fx:id="listViewGoods" layoutX="838.0" layoutY="172.0" onDragDetected="#dragGood" prefHeight="200.0" prefWidth="200.0" />
       <TextField fx:id="textFieldSearch" layoutX="839.0" layoutY="135.0" prefHeight="25.0" prefWidth="200.0" />

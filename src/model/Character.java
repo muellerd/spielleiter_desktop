@@ -2,24 +2,24 @@ package model;
 
 import java.io.Serializable;
 
-public class Held implements Serializable{
+public class Character implements Serializable{
 
 	private String name;
 	private int costGold;
-	private int costSilber;
-	private int costKupfer;
+	private int costSilver;
+	private int costCopper;
 
-	public Held(){
+	public Character(){
 		costGold = 0;
-		costSilber = 0;
-		costKupfer = 0;
+		costSilver = 0;
+		costCopper = 0;
 	}
 	
-	public Held(String n){
+	public Character(String n){
 		this.name = n;
 		costGold = 0;
-		costSilber = 0;
-		costKupfer = 0;
+		costSilver = 0;
+		costCopper = 0;
 	}
 	
 	public String getName(){
@@ -31,7 +31,7 @@ public class Held implements Serializable{
 	}
 
 	public String getNameAndCost() {
-		return this.name + ": 	" + costGold + " GM, " + costSilber + " SM, " + costKupfer + " KM";
+		return this.name + ": 	" + costGold + " GM, " + costSilver + " SM, " + costCopper + " KM";
 	}
 
 	public void addGood(Good g, int i) {
@@ -42,23 +42,11 @@ public class Held implements Serializable{
         }
         if(priceString.contains("SM")){
             priceString = priceString.replace("SM", "").trim();
-            this.costSilber += Integer.parseInt(priceString);
+            this.costSilver += Integer.parseInt(priceString);
         }
         if(priceString.contains("KM")){
             priceString = priceString.replace("KM", "").trim();
-            this.costKupfer += Integer.parseInt(priceString);
+            this.costCopper += Integer.parseInt(priceString);
         }
-	}
-
-	public int getHeller() {
-		return this.costKupfer;
-	}
-
-	public int getSilber() {
-		return this.costSilber;
-	}
-
-	public int getDukaten() {
-		return this.costGold;
 	}
 }

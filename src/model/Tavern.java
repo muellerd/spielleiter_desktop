@@ -13,10 +13,10 @@ public class Tavern implements Serializable{
 	
 	
 	/*
-	 * Festlegen:
-	 * Preisniveau 	-> 1-5 Sterne, 5 Sterne am teuersten
-	 * Qualität		-> 1-5 Sterne, 5 Sterne am besten
-	 * Größe		-> winzig, klein, normal, groß, riesig
+	 * Set:
+	 * Price niveau -> 1-5 Stars, 5 Stars most expensive
+	 * Quality		-> 1-5 Stars, 5 Stars is the best
+	 * Size			-> tiny, small, medium, big, huge
 	 */
 	
 	public Tavern(){
@@ -41,7 +41,7 @@ public class Tavern implements Serializable{
 	public String getDescription() {
 		TavernSize [] ts = TavernSize.values();
 		
-		return "Preis: " + this.price + "/5, Qualität: " + this.quality + "/5, Größe: " + ts[this.size-1];
+		return "Price: " + this.price + "/5, Quality: " + this.quality + "/5, Size: " + ts[this.size-1];
 	}
 	
 	public void initializeDetails(){
@@ -50,15 +50,15 @@ public class Tavern implements Serializable{
 		this.size = this.randomer.nextInt(5) + 1;
 	}
 
-	public String getPreisniveau() {
+	public String getPriceNiveau() {
 		return this.price + "/5";
 	}
 
-	public String getQualitaetsniveau() {
+	public String getQualityNiveau() {
 		return this.quality + "/5";
 	}
 
-	public String getGroesse() {
+	public String getSize() {
 		TavernSize [] ts = TavernSize.values();
 		return ts[this.size-1].toString();
 	}

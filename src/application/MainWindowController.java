@@ -10,6 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.*;
 import javafx.util.Callback;
 import model.*;
+import model.Character;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -19,22 +20,22 @@ import java.util.ResourceBundle;
 public class MainWindowController implements Initializable{
     public Button buttonNewTavern;
     public ListView listViewLog;
-    public ListView listViewHelden;
-    public TextField textFieldHeldenName;
+    public ListView listViewCharacters;
+    public TextField textFieldCharacterName;
     public Button buttonNewName;
-    public CheckBox checkBoxW;
+    public CheckBox checkBoxF;
     public CheckBox checkBoxM;
     public ListView listViewGoods;
     public TextField textFieldSearch;
 
     private ArrayList<String> logList;
-    private ArrayList<Held> heldenList;
-    private HashMap<String, Held> heldenNameToHelds;
+    private ArrayList<Character> characterList;
+    private HashMap<String, Character> characterNameToCharacters;
     private ArrayList<Good> goodsList;
     private HashMap<String, Good> goodsNameToGoods;
 
     private ObservableList<String> listViewLogItems;
-    private ObservableList<Held> listViewHeldenItems;
+    private ObservableList<Character> listViewCharacterItems;
     private ObservableList<Good> listViewGoodsItems;
 
     private ListCell currentCell;
@@ -51,16 +52,16 @@ public class MainWindowController implements Initializable{
         this.listViewLogItems = FXCollections.observableArrayList(logList);
         this.listViewLog.setItems(listViewLogItems);
 
-        this.heldenList = new ArrayList<>();
-        this.heldenNameToHelds = new HashMap<>();
-        this.listViewHeldenItems = FXCollections.observableArrayList(heldenList);
-        this.listViewHelden.setItems(listViewHeldenItems);
-        this.listViewHelden.setCellFactory(new Callback<ListView, ListCell>() {
+        this.characterList = new ArrayList<>();
+        this.characterNameToCharacters = new HashMap<>();
+        this.listViewCharacterItems = FXCollections.observableArrayList(characterList);
+        this.listViewCharacters.setItems(listViewCharacterItems);
+        this.listViewCharacters.setCellFactory(new Callback<ListView, ListCell>() {
             @Override
             public ListCell call(ListView param) {
-                ListCell<Held> cell = new ListCell<Held>(){
+                ListCell<Character> cell = new ListCell<Character>(){
                     @Override
-                    protected void updateItem(Held item, boolean empty) {
+                    protected void updateItem(Character item, boolean empty) {
                         super.updateItem(item, empty);
                         if(item != null){
                             setText(item.getName());
@@ -119,7 +120,7 @@ public class MainWindowController implements Initializable{
             }
         });
 
-        this.listViewHelden.setOnDragOver(new EventHandler<DragEvent>() {
+        this.listViewCharacters.setOnDragOver(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 if(event.getGestureSource().equals(listViewGoods)){
@@ -129,14 +130,14 @@ public class MainWindowController implements Initializable{
             }
         });
 
-        this.listViewHelden.setOnDragDropped(new EventHandler<DragEvent>() {
+        this.listViewCharacters.setOnDragDropped(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent event) {
                 Dragboard db = event.getDragboard();
                 boolean success = false;
                 if(db.hasString()){
                     Good g = goodsNameToGoods.get(db.getString());
-                    Held h = heldenNameToHelds.get(currentCell.getText());
+                    Character h = characterNameToCharacters.get(currentCell.getText());
                     System.out.println("Drop " + g.getName() + " on " + h.getName());
                     h.addGood(g, 1);
                     success = true;
@@ -146,13 +147,13 @@ public class MainWindowController implements Initializable{
             }
         });
 
-        listViewHelden.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        listViewCharacters.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {
                 if(event.getClickCount() == 2){
-                    Object obj = listViewHelden.getSelectionModel().getSelectedItem();
+                    Object obj = listViewCharacters.getSelectionModel().getSelectedItem();
                     if(obj != null){
-                        Held h = (Held) obj;
+                        Character h = (Character) obj;
                         System.out.println(h.getNameAndCost());
                     }
 
@@ -164,26 +165,26 @@ public class MainWindowController implements Initializable{
 
     public void addHeld(KeyEvent keyEvent) {
         if(keyEvent.getCode().equals(KeyCode.ENTER)){
-            Held h = new Held(textFieldHeldenName.getText());
-            heldenNameToHelds.put(h.getName(), h);
-            listViewHeldenItems.add(h);
-            textFieldHeldenName.setText("");
+            Character h = new Character(textFieldCharacterName.getText());
+            characterNameToCharacters.put(h.getName(), h);
+            listViewCharacterItems.add(h);
+            textFieldCharacterName.setText("");
         }
     }
 
     public void createNewName(ActionEvent actionEvent) {
-        if(!checkBoxM.isSelected() && !checkBoxW.isSelected()){
-            this.listViewLogItems.add("Kein Geschlecht gewählt");
+        if(!checkBoxM.isSelected() && !checkBoxF.isSelected()){
+            this.listViewLogItems.add("Gender not selected");
             this.listViewLog.scrollTo(this.listViewLogItems.size()-1);
         }
         String name = "";
-        if(!checkBoxW.isSelected() && checkBoxM.isSelected()){
+        if(!checkBoxF.isSelected() && checkBoxM.isSelected()){
             name = Main.sessionData.getRandomMaleName();
         }
-        if(!checkBoxM.isSelected() && checkBoxW.isSelected()){
+        if(!checkBoxM.isSelected() && checkBoxF.isSelected()){
             name = Main.sessionData.getRandomFemaleName();
         }
-        if(checkBoxW.isSelected() && checkBoxM.isSelected()){
+        if(checkBoxF.isSelected() && checkBoxM.isSelected()){
             name = Main.sessionData.getRandomName();
         }
         if(!name.equals("")){
