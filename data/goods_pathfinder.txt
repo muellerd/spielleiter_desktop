@@ -1,0 +1,173 @@
+//Kategorie;Name;Preis;Gewicht
+Ausrüstung;Abdeckbare Laterne;7 GM;2 Pfd.
+Ausrüstung;Angelhaken;1 SM;-
+Ausrüstung;Blendlaterne;12 GM;3 Pfd.
+Ausrüstung;Brecheisen;2 GM;5 Pfd.
+Ausrüstung;Eimer (leer);5 SM;2 Pfd.
+Ausrüstung;Eisentopf;8 SM;4 Pfd.
+Ausrüstung;Fackel;1 KM;1 Pfd.
+Ausrüstung;Fass (leer);2 GM;30 Pfd.
+Ausrüstung;Fernglas;1.000 GM;1 Pfd.
+Ausrüstung;Feuerholz (pro Tag);1 KM;20 Pfd.
+Ausrüstung;Feuerstein und Stahl;1 GM;-
+Ausrüstung;Fischernetz 1,50m x 1,50m);4 GM;5 Pfd.
+Ausrüstung;Flasche (leer);3 KM;1-1/2 Pfd.
+Ausrüstung;Flaschenzug;5 GM;5 Pfd.
+Ausrüstung;Glocke;1 GM;-
+Ausrüstung;Gürteltasche (leer);1 GM;½ Pfd.
+Ausrüstung;Hammer;5 SM;2 Pfd.
+Ausrüstung;Handschellen;15 GM;2 Pfd.
+Ausrüstung;Handschellen [Meisterarbeit];50 GM;2 Pfd.
+Ausrüstung;Handschellen, Mithral-;1.000 GM;2 Pfd.
+Ausrüstung;Hanfseil (15 m);1 GM;10 Pfd.
+Ausrüstung;Karten- und Schriftrollenbehälter;1 GM;½ Pfd.
+Ausrüstung;Kerze;1 KM;-
+Ausrüstung;Kette (3 m);30 GM;2 Pfd.
+Ausrüstung;Kleiner Stahlspiegel;10 GM;½ Pfd.
+Ausrüstung;Kletterhaken;1 SM;½ Pfd.
+Ausrüstung;Korb (leer);4 GM;1 Pfd.
+Ausrüstung;Krähenfüße;1 GM;2 Pfd.
+Ausrüstung;Kreide, 1 Stück;1 KM;-
+Ausrüstung;Lampe, gewöhnliche;1 SM;1 Pfd.
+Ausrüstung;Leinwand (ca. 1 m²);1 SM;1 Pfd.
+Ausrüstung;Leiter, 3 m;2 SM;20 Pfd.
+Ausrüstung;Nähnadel;5 SM;-
+Ausrüstung;Öl (Fläschchen mit ca. ½ Liter);1 SM;1 Pfd.
+Ausrüstung;Papier (Blatt);4 SM;-
+Ausrüstung;Pergament (Blatt);2 SM;-
+Ausrüstung;Phiole für Tinte oder Trank;1 GM;-
+Ausrüstung;Reiseproviant (pro Tag);5 SM;1 Pfd.
+Ausrüstung;Rucksack (leer);2 GM;2 Pfd.
+Ausrüstung;Sack (leer);1 SM;½ Pfd.
+Ausrüstung;Schlafsack;1 SM;5 Pfd.
+Ausrüstung;Schleifstein;2 KM;1 Pfd.
+Ausrüstung;Einfaches Schloss;20 GM;1 Pfd.
+Ausrüstung;Durchschnittliches Schloss;40 GM;1 Pfd.
+Ausrüstung;Gutes Schloss;80 GM;1 Pfd.
+Ausrüstung;Hervorragendes Schloss;150 GM;1 Pfd.
+Ausrüstung;Seidenseil (15 m);10 GM;5 Pfd.
+Ausrüstung;Seife (pro Pfund);5 SM;1 Pfd.
+Ausrüstung;Siegelring;5 GM;-
+Ausrüstung;Siegelwachs;1 GM;1 Pfd.
+Ausrüstung;Signalpfeife;8 SM;-
+Ausrüstung;Spaten oder Schaufel;2 GM;8 Pfd.
+Ausrüstung;Spitzhacke;3 GM;10 Pfd.
+Ausrüstung;Stab, 3 M;5 KM;8 Pfd.
+Ausrüstung;Stundenglas;25 GM;1 Pfd.
+Ausrüstung;Tinte (Fläschchen mit ca. 30 ml);8 GM;-
+Ausrüstung;Tintenschreiber;1 SM;-
+Ausrüstung;Tonbecher;2 KM;1 Pfd.
+Ausrüstung;Tonhumpen;2 KM;5 Pfd.
+Ausrüstung;Tonkrug;3 KM;9 Pfd.
+Ausrüstung;Tragbarer Rammbock;10 GM;20 Pfd.
+Ausrüstung;Truhe (leer);2 GM;25 Pfd.
+Ausrüstung;Vorschlaghammer;1 GM;10 Pfd.
+Ausrüstung;Wasserschlauch;1 GM;4 Pfd.
+Ausrüstung;Wasseruhr;1.000 GM;200 Pfd.
+Ausrüstung;Wein in Glasflasche;2 GM;1 Pfd.
+Ausrüstung;Winterdecke;5 SM;3 Pfd.
+Ausrüstung;Wurfhaken;1 GM;4 Pfd.
+Ausrüstung;Zelt;10 GM;20 Pfd.
+Substanzen;Alchemistenfeuer (Fläschchen);20 GM;1 Pfd.
+Substanzen;Donnerstein;30 GM;1 Pfd.
+Substanzen;Ewige Fackel;110 GM;1 Pfd.
+Substanzen;Gegengift (Phiole);50 GM;-
+Substanzen;Rauchstab;20 GM;½ Pfd.
+Substanzen;Säure (Fläschchen);10 GM;1 Pfd.
+Substanzen;Sonnenzepter;2 GM;1 Pfd.
+Substanzen;Verstrickungsbeutel;50 GM;4 Pfd.
+Substanzen;Weihwasser (Fläschchen);25 GM;1 Pfd.
+Substanzen;Zündholz;1 GM;-
+Werkzeug;Alchemistenlabor;200 GM;40 Pfd.
+Werkzeug;Beutel für Materialkomponenten;5 GM;2 Pfd.
+Werkzeug;Diebeswerkzeug;30 GM;1 Pfd.
+Werkzeug;Diebeswerkzeug [Meisterarbeit];100 GM;2 Pfd.
+Werkzeug;Heilertasche;50 GM;1 Pfd.
+Werkzeug;Heiliges Symbol aus Holz;1 GM;-
+Werkzeug;Heiliges Symbol, Eisen;5 GM;1 Pfd.
+Werkzeug;Heiliges Symbol aus Silber;25 GM;1 Pfd.
+Werkzeug;Heiliges Symbol, Gold;100 GM;1 Pfd.
+Werkzeug;Heiliges Symbol, Platin;500 GM;1 Pfd.
+Werkzeug;Heiliges Symbol, Tätowierung;100 GM;–
+Werkzeug;Heiliges Symbol mit Geheimfach;+5 GM;–
+Werkzeug;Heiliges Symbol mit Flasche;+10 GM;–
+Werkzeug;Kaufmannswaage;2 GM;1 Pfd.
+Werkzeug;Werkzeug;Kletterzeug;80 GM;5 Pfd.
+Werkzeug;Lupe;100 GM;-
+Werkzeug;Musikinstrument, gewöhnlich;5 GM;3 Pfd.
+Werkzeug;Musikinstrument, Meisterarbeit;100 GM;3 Pfd.
+Werkzeug;Schminkzeug;50 GM;8 Pfd.
+Werkzeug;Stechpalmen und Misteln;- ;-
+Werkzeug;Werkzeug eines Handwerkers, gewöhnlich;5 GM;5 Pfd.
+Werkzeug;Werkzeug eines Handwerkers, Meisterarbeit;55 GM;5 Pfd.
+Werkzeug;Werkzeugsatz;5 GM;5 Pfd.
+Werkzeug;Werkzeugsatz [Meisterarbeit];55 GM;5 Pfd.
+Werkzeug;Zauberbuch;15 GM;3 Pfd.
+Kleidung;Adelskleidung;75 GM;10 Pfd.
+Kleidung;Bauernkleidung;1 SM;2 Pfd.
+Kleidung;Entdeckerkleidung;10 GM;8 Pfd.
+Kleidung;Gelehrtenkleidung;5 GM;6 Pfd.
+Kleidung;Handwerkskleidung;1 GM;4 Pfd.
+Kleidung;Höflingskleidung;30 GM;6 Pfd.
+Kleidung;Kaltwetterkleidung;8 GM;7 Pfd.
+Kleidung;Klerikale Gewandung;5 GM;6 Pfd.
+Kleidung;Königliche Kleidung;200 GM;15 Pfd.
+Kleidung;Mönchskleidung;5 GM;2 Pfd.
+Kleidung;Unterhalterkleidung;3 GM;4 Pfd.
+Kleidung;Reisekleidung;1 GM;5 Pfd.
+Verpflegung;Bankett (pro Person);10 GM;-
+Verpflegung;Bier 4 Liter;2 SM;8 Pfd.
+Verpflegung;Bier 1 Krug;4 KM;1 Pfd.
+Verpflegung;Brot (pro Laib);2 KM;½ Pfd.
+Verpflegung;Fleisch (Stück);3 SM;½ Pfd.
+Unterkunft;Gastaufenthalt (pro Tag) Gut;2 GM;-
+Unterkunft;Gastaufenthalt (pro Tag) Durchschnittlich;5 SM;-
+Unterkunft;Gastaufenthalt (pro Tag) Armselig;2 SM;-
+Unterkunft;Zimmerflucht, einfach;4 GM;-
+Unterkunft;Zimmerflucht, mittel;16 GM;-
+Unterkunft;Zimmerflucht, luxuriös;32 GM und höher;-
+Verpflegung;Käse (Stück);1 SM;½ Pfd.
+Verpflegung;Mahlzeit (pro Tag) dürftig;1 SM;-
+Verpflegung;Mahlzeit (pro Tag) gewöhnlich;3 SM;-
+Verpflegung;Mahlzeit (pro Tag) gut;5 SM;-
+Verpflegung;Wein gewöhnlich (Kanne);2 SM;6 Pfd.
+Verpflegung;Wein edel (Flasche);10 GM;1,5 Pfd.
+Reittier;Esel oder Maultier;8 GM;600-800 Pfd.
+Reittier;Futter (pro Tag);5 KM;10 Pfd.
+Reittier;Kriegspony;45 GM;900 Pfd.
+Reittier;Leichtes Streitross;110 GM;1.200 Pfd.
+Reittier;Pony;30 GM;800 Pfd.
+Reittier;Reitpferd;75 GM;900 Pfd.
+Reittier;Schweres Streitross;300 GM;3.000 Pfd.
+Reittier;Zugpferd;200 GM;2.000 Pfd.
+Reittier;Pferdeharnisch Mittelgroße Kreatur;x2;x1
+Reittier;Pferdeharnisch Große Kreatur;x4;x2
+Reittier;Reithund;150 GM;50 Pfd.
+Reittier;Militärsattel;20 GM;30 Pfd.
+Reittier;Packsattel;5 GM;15 Pfd.
+Reittier;Reitsattel;10 GM;25 Pfd.
+Reittier;Exotischer Militärsattel;60 GM;40 Pfd
+Reittier;Exotischer Packsattel;15 GM;20 Pfd.
+Reittier;Exotischer Reitsattel;30 GM;30 Pfd.
+Reittier;Satteltaschen;4 GM;8 Pfd.
+Reittier;Reittier;Stallunterbringung (pro Tag);5 SM;-
+Reittier;Wachhund;25 GM;25 Pfd.
+Reittier;Zaumzeug;2 GM;1 Pfd.
+Transport;Galeere;30.000 GM;-
+Transport;Karren;15 GM;200 Pfd.
+Transport;Knarr;3.000 GM;-
+Transport;Kriegsschiff;25.000 GM;-
+Transport;Kutsche;100 GM;600 Pfd.
+Transport;Langschiff;10.000 GM;-
+Transport;Ruder;2 GM;10 Pfd.
+Transport;Ruderboot;50 GM;100 Pfd.
+Transport;Schlitten;20 GM;300 Pfd.
+Transport;Segelschiff;10.000 GM;-
+Transport;Wagen;35 GM;400 Pfd.
+Dienstleistung;Bote;2 KM pro 1,5 km;-
+Dienstleistung;Kutschfahrt;3 KM pro 1,5 km;-
+Dienstleistung;Mietling, ausgebildet;3 SM pro Tag;-
+Dienstleistung;Mietling, unausgebildet;1 SM pro Tag;-
+Dienstleistung;Schiffsreise;1 SM pro 1,5 km;-
+Dienstleistung;Weg- oder Torzoll;1 KM;-
+Dienstleistung;Zauber;Zauberstufe x Grad des Zaubers x 10 GM;-

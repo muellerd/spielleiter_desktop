@@ -1,0 +1,4 @@
+//maskulinum,femininum,neutrum
+Zum,Zur,Zum
+Am,An der,Am
+Im,In der,Im
