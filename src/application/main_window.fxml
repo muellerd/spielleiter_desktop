@@ -4,11 +4,13 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1052.0"
-      xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
    <children>
       <ListView fx:id="listViewLog" layoutX="14.0" layoutY="393.0" prefHeight="258.0" prefWidth="1024.0" />
       <Button fx:id="buttonNewTavern" layoutX="868.0" layoutY="30.0" mnemonicParsing="false" onAction="#createNewTavern" prefHeight="25.0" prefWidth="170.0" text="Neue Taverne" />
@@ -20,5 +22,20 @@
       <CheckBox fx:id="checkBoxM" layoutX="959.0" layoutY="101.0" mnemonicParsing="false" selected="true" text="m" />
       <ListView fx:id="listViewGoods" layoutX="838.0" layoutY="172.0" onDragDetected="#dragGood" prefHeight="200.0" prefWidth="200.0" />
       <TextField fx:id="textFieldSearch" layoutX="839.0" layoutY="135.0" prefHeight="25.0" prefWidth="200.0" />
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="1052.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datei">
+            <items>
+                  <MenuItem fx:id="menuItemSettings" mnemonicParsing="false" onAction="#openApplicationSettings" text="Optionen" />
+              <MenuItem fx:id="menuItemClose" mnemonicParsing="false" onAction="#closeApplication" text="Schließen" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Hilfe">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Über" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </Pane>

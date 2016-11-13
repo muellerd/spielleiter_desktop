@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="574.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainWindowController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Optionen">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="41.0" text="NPCs" underline="true" />
+      <Label layoutX="8.0" layoutY="69.0" text="Frauen" />
+      <Label layoutX="9.0" layoutY="101.0" text="Männer" />
+      <Label layoutX="8.0" layoutY="131.0" text="Nachnamen" />
+      <TextField layoutX="113.0" layoutY="65.0" prefHeight="25.0" prefWidth="279.0" text="data/female_all.txt" />
+      <TextField layoutX="113.0" layoutY="97.0" prefHeight="25.0" prefWidth="279.0" text="data/male_all.txt" />
+      <TextField layoutX="113.0" layoutY="127.0" prefHeight="25.0" prefWidth="279.0" text="data/lastnames_all.txt" />
+      <Label layoutX="16.0" layoutY="169.0" text="Tavernen" underline="true" />
+      <Label layoutX="12.0" layoutY="194.0" text="Präpositionen" />
+      <TextField layoutX="113.0" layoutY="190.0" prefHeight="25.0" prefWidth="279.0" text="data/prepositions.txt" />
+      <Label layoutX="12.0" layoutY="229.0" text="Adjekte" />
+      <TextField layoutX="113.0" layoutY="225.0" prefHeight="25.0" prefWidth="279.0" text="data/adjectives.txt" />
+      <TextField layoutX="113.0" layoutY="259.0" prefHeight="25.0" prefWidth="279.0" text="data/nouns.txt" />
+      <Label layoutX="12.0" layoutY="263.0" text="Nomen" />
+      <Label layoutX="12.0" layoutY="305.0" text="Waren" underline="true" />
+      <TextField layoutX="113.0" layoutY="301.0" prefHeight="25.0" prefWidth="279.0" text="data/goods_pathfinder.txt" />
+      <Button layoutX="486.0" layoutY="374.0" mnemonicParsing="false" text="Abbrechen" />
+      <Button layoutX="406.0" layoutY="374.0" mnemonicParsing="false" text="Speichern" />
+      <Button layoutX="390.0" layoutY="65.0" mnemonicParsing="false" text="..." />
+      <Button layoutX="390.0" layoutY="97.0" mnemonicParsing="false" text="..." />
+      <Button layoutX="390.0" layoutY="127.0" mnemonicParsing="false" text="..." />
+      <Button layoutX="390.0" layoutY="190.0" mnemonicParsing="false" text="..." />
+      <Button layoutX="391.0" layoutY="225.0" mnemonicParsing="false" text="..." />
+      <Button layoutX="390.0" layoutY="259.0" mnemonicParsing="false" text="..." />
+      <Button layoutX="389.0" layoutY="301.0" mnemonicParsing="false" text="..." />
+   </children>
+</Pane>

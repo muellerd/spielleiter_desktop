@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import model.*;
 import model.Character;
@@ -27,6 +28,8 @@ public class MainWindowController implements Initializable{
     public CheckBox checkBoxM;
     public ListView listViewGoods;
     public TextField textFieldSearch;
+    public MenuItem menuItemSettings;
+    public MenuItem menuItemClose;
 
     private ArrayList<String> logList;
     private ArrayList<Character> characterList;
@@ -202,6 +205,15 @@ public class MainWindowController implements Initializable{
     }
 
     public void dropGood(DragEvent dragEvent) {
+
+    }
+
+    public void closeApplication(ActionEvent actionEvent) {
+        Stage stage = (Stage) buttonNewName.getScene().getWindow();
+        stage.close();
+    }
+
+    public void openApplicationSettings(ActionEvent actionEvent) {
 
     }
 }
